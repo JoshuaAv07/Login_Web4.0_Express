@@ -1,0 +1,21 @@
+<%- layout('layouts/main.ejs') %>
+    <header>
+        <img src="" alt="logo">
+    </header>
+
+    <h1>Sign In</h1>
+    <div class="links">
+        <span>or <a class="title-link" href="/signup" method="GET">Sign Up</a></span>
+    </div>
+
+    <% if (signinMessage) { %>
+
+        <div class="alerts"><%= signinMessage %></div>
+
+    <% } %>
+
+    <form action="/signin" method="POST">
+      <input name="email" type="text" placeholder="Enter your email">
+      <input name="pass" type="password" placeholder="Enter your password">
+      <input type="submit" value="Sign In">
+    </form>
