@@ -1,17 +1,15 @@
 <%- layout('layouts/main.ejs') %>
-    <header>
-        <img src="img/Letter-J-PNG.png" alt="logo">
+    <header class="intro">
+        <img class="photo" src="img/Letter-J-PNG.png" alt="logo">
     </header>
 
-    <h1>Sign In</h1>
+    <h1 class="title1">Sign In</h1>
     <div class="links">
-        <span>or <a class="title-link" href="/signup" method="GET">Sign Up</a></span>
+        <span class="span">or <a class="title-link" href="/signup" method="GET">Sign Up</a></span>
     </div>
 
     <% if (signinMessage) { %>
-
         <div class="alerts"><%= signinMessage %></div>
-
     <% } %>
 
     <form action="/signin" method="POST">
